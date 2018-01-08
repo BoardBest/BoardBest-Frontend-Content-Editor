@@ -1,0 +1,217 @@
+/* html{
+	scroll-behavior: smooth;
+} */
+
+.site{
+	transition: filter 500ms linear;
+	-webkit-transition : -webkit-filter 500ms linear;
+}
+
+#editor-preloader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(176, 176, 176, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+#editor-preloader img{
+	border-radius: 150px;
+	width: 296px;
+	height: 296px;
+}
+
+.mce-btn .mce-txt {
+    direction: inherit;
+    text-align: inherit;
+    line-height: 1.5em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+#FN_frontend_editor_ifr,
+#wp-FN_frontend_editor-wrap{
+	min-width:300px;
+	max-width:100vw;
+	min-height: 300px;
+	max-height: 100vh;
+}
+
+/* #wp-FN_frontend_editor-wrap.hide{
+	display:none;
+} */
+#FN-editor-wrapper{
+	background-color: rgba(158, 158, 158, 0.5);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+}
+#wp-FN_frontend_editor-wrap{
+	position: absolute;
+	box-shadow: 0 0 20px #444;
+	border: 1px solid #aaa;
+	z-index: 1000;
+	margin-top:-4em;
+	top:20%;
+	left:35%;
+	transition: opacity 333ms linear;
+	opacity: 0;
+}
+#wp-FN_frontend_editor-editor-tools{
+	background-color: #424242;
+	padding: 0.5em;
+}
+#FN_content_before_filtering{
+	display:none;
+}
+.entry-content .FN_edit{
+	outline: 1px dashed #747474;
+}
+.entry-content .FN_edit > *{
+	/*pointer-events: none;*/
+}
+.entry-content .FN_edit>.section-options{
+	pointer-events: initial;
+}
+.entry-content .FN_edit:hover{
+	outline: 1px dashed #fff;
+	cursor:pointer;
+}
+#wp-FN_frontend_editor-media-buttons{
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+#wp-FN_frontend_editor-media-buttons > *{
+	width: auto;
+	display: inline-block;
+	margin:0.5em 0.2em;
+	float:left;
+}
+
+#insert-media-button{
+	margin-right:2px;
+}
+#close_content_button{
+	float:right;
+	padding: 0.5em;
+	background: #eee;
+	color: #666;
+	font-size:0.8em;
+}
+#save_content_button{
+	float:right;
+	padding:0.5em;
+}
+
+
+#wp-FN_frontend_editor-media-buttons .dashicons{
+	vertical-align: -6px;
+	margin-right: 5px;
+}
+#wp-FN_frontend_editor-media-buttons .save-button{
+    font-size: 0.8em;
+    color: #111;
+    border-color: #006fc9;
+    background: #5eceff;
+    -webkit-box-shadow: 0 1px 0 #ccc;
+    box-shadow: 0 2px 0px 0px #0080ff;
+    vertical-align: top;
+    text-shadow: 0;
+    float: right;
+
+}
+
+
+
+
+/* sections */
+section{
+	/* transition: background-color 300ms linear; */
+	position:relative;
+}
+section.section-hover{
+	border-bottom:1px solid #000;
+}
+section.section-hover .section-options{
+	opacity:1;
+	left:-1px;
+}
+
+.section-options {
+	opacity: 0;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	background-color: #000;
+	left: -30px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	transition: left .3s ease;
+	border-right: 3px solid #fff;
+}
+.section-options > .section-option{
+	background-color: #ccc;
+	width: 28px;
+	height: 32px;
+	display: inline-block;
+	padding: 0px;
+	margin: 1px;
+	text-align: center;
+}
+.section-options > .section-option:hover{
+	background-color: #fff;
+	cursor:pointer;
+}
+
+/* media popup */
+.wp-core-ui .button-group{
+	display:flex;
+	padding-right: 20px;
+}
+
+/* vue popup */
+.actionsBar{
+	margin-top:1em;
+}
+.fn-editor--popup{
+	user-select: none;
+	-webkit-user-select: none;
+}
+.fn-editor--popup h2{
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+}
+.fn-editor--popup p{
+	padding-bottom:1em;
+}
+
+/* vue components */
+.shortcode-tile{
+	border: 1px solid rgb(204, 204, 204);
+	margin: 3px;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.shortcode-tile:hover{
+	background: #ddd;
+	cursor:pointer;
+}
+
+.shortcode-tile i{
+	font-size: 4em; 
+	color: #454545;
+	margin-bottom: 15px;
+}
+
